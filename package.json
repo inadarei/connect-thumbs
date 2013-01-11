@@ -5,6 +5,7 @@
   }
   , "name": "connect-thumbs"
   , "description": "Image thumbnailing middleware for Connect."
+  , "keywords": ["thumbnail", "imagemagick", "thumb", "photos", "crop", "resize", "connect", "middleware"]
   , "version": "0.1.0"
   , "repository": {
       "type": "git"
