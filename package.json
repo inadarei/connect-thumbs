@@ -1,0 +1,32 @@
+{
+  "author": {
+    "name": "Irakli Nadareishvili"
+  , "email": "irakli+github@gmail.com"
+  , "url": "http://freshblurbs.com"
+  }
+  , "name": "connect-thumbs"
+  , "description": "Image thumbnailing middleware for Connect."
+  , "version": "0.1.0"
+  , "repository": {
+      "type": "git"
+    , "url": "git@github.com:inadarei/connect-thumbs.git"
+  }
+  , "main": "./index.js"
+  , "licenses": [ {
+      "type": "MIT"
+    , "url": "http://www.opensource.org/licenses/MIT"
+  } ]
+  , "dependencies": {
+      "underscore"         : "1.x"
+    , "request"            : "2.x"
+    , "pause"              : "0.x"
+    , "send"               : "0.x"
+    , "mkdirp"             : "0.x"
+    , "imagemagick"        : "0.x"
+  }
+  , "devDependencies": {"connect": "*"},
+    "optionalDependencies": {}
+    , "engines": {
+        "node": "*"
+    }
+}
