@@ -25,7 +25,7 @@ when configured with defaults, and if you have your node process running at your
 
     http://yourdomain.com/thumbs/medium/images/aHR0cDovL3VwbG9hZC53aWtpbWVkaWEub3JnL3dpa2lwZWRpYS9jb21tb25zLzYvNjYvRWluc3RlaW5fMTkyMV9ieV9GX1NjaG11dHplci5qcGc=.jpg
     
-will display Eisntein's photo from Wikipedia as a width: 300 (and proportionally resized height) thumbnail.
+will display Einstein's photo from Wikipedia as a width: 300 (and proportionally resized height) thumbnail.
 
 This is because:
  
