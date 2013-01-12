@@ -3,7 +3,6 @@ connect-thumbs
 
 Image thumbnailing middleware for Connect.js
 
-
 ## License
 
 (The MIT License)
