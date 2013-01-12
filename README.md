@@ -17,9 +17,10 @@ paths to thumbnailed images to pass through to Node. Please add appropriate exce
 Alternatively, sometimes connect-static is used to serve static content. If you do that, please make sure that 
 connect-static fires *after* connect-thumbs does.
     
-## Usage
+## Express.js Usage
 
     var thumbs = require('connect-thumbs');
+    app.use(thumbs());
     
 when configured with defaults, and if you have your node process running at yourdomain.com, a request such as:
 
@@ -59,7 +60,7 @@ proxy/cache. Good options may be:
 # Customization 
 
 ```
-    var thumbs = require('connect-thumbs')({
+    app.use(thumbs({
       "ttl": "92000"
     , "tmpDir": "/tmp/mynodethumbnails"
     , "decodeFn": loadImageUrlFromDbById
@@ -78,7 +79,7 @@ proxy/cache. Good options may be:
           , compression:.85
         }
       }
-    });
+    }));
 ```
 
 where:
