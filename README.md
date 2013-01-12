@@ -21,13 +21,14 @@ when configured with defaults, and if you have your node process running at your
 will display Eisntein's photo from Wikipedia as a width: 300 (and proportionally resized height) thumbnail.
 
 This is because:
- # `/thumbs/medium` in the begining of the URL instructs the middleware to use default resizing preset named "medium" 
+ 
+1. `/thumbs/medium` in the begining of the URL instructs the middleware to use default resizing preset named "medium" 
  which corresponds to proportional resizing to width: 300px.
- # the long, somewhat cryptic code after /images/ is base64-encoded version of the 
+1. the long, somewhat cryptic code after /images/ is base64-encoded version of the 
  [URL of Einstein's photo on Wikipedia](http://upload.wikimedia.org/wikipedia/commons/6/66/Einstein_1921_by_F_Schmutzer.jpg)
  and connect-middleware uses base64, by default, to encode the ID of the desired image.
  
-You can provide alternative "decoderFn" function, if you would rather use shorter IDs of your photos from your database, 
+You can provide an alternative "decoderFn" function, if you would rather use shorter IDs of your photos from your database, 
 or UUIDs or whatever else makes sense to you (see below). Custom decoderFn functions must have following signature: 
 
     function(encodedURL, callback)
