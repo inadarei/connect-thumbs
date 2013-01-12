@@ -10,6 +10,13 @@ Connect.js-complient way, allowing sensible defaults and high degree of customiz
 
     $ npm install connect-thumbs
     
+*ATTENTION*: in typical web setups, static content such as images is often served by a web-server, never allowing 
+requests to *.jpg, *.png etc. to reach Node process. If you want to use connect-thumbs, obviously you must allow
+paths to thumbnailed images to pass through to Node. Please add appropriate exception to you web server configuration.
+
+Alternatively, sometimes connect-static is used to serve static content. If you do that, please make sure that 
+connect-static fires *after* connect-thumbs does.
+    
 ## Usage
 
     var thumbs = require('connect-thumbs');
