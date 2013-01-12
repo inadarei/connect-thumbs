@@ -45,6 +45,17 @@ and must call callback, upon completion, with following syntax:
     callback(err, decodedURLValue);
 
 
+# Performance and Scalability
+
+Node.js is very fast, but Imagemagick most certainly is not (and neither may be your customer decodeFn function if it is doing a database 
+lookup for every request), so in any production set up it is highly recommended to put thubmnailed URLs behind some sort of
+proxy/cache. Good options may be:
+
+- Varnish
+- A good CDN such as Amazon's CloudFront
+- Pick your own poison.
+
+
 # Customization 
 
 ```
