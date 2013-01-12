@@ -88,7 +88,8 @@ where:
    You may want to periodically clean-up that folder.
  * decodeFn - custom decoder function. Defaults to one that decodes base64-encoded full URLs.
  * allowedExtensions - file (path) extensions that connect-thumbs will try to thumbnail. Defaults to: jpg, jpeg, gif and png.
- * presets - json object describing various image presets. You can indicate width, height and compression level for each. More options to come.
+ * presets - json object describing various image presets. You can indicate width, height and compression level for each. 
+   Currently width is required and it is the only required argument. Expect more flexibility here in the following versions.
 
 ## License
 
