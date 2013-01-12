@@ -72,7 +72,12 @@ and must call callback, upon completion, with following syntax:
 
 where:
 
- * ttl - is the duration of cache that set-headers of the resulting thumbnail image will be set to
+ * ttl - is the cache duration that will be returned in the HTTP headers for the resulting thumbnail
+ * tmpDir - is the Node-writable temp folder where file operations will be performed. Defaults to: `/tmp/nodethumbnails`. 
+   You may want to periodically clean-up that folder.
+ * decodeFn - custom decoder function. Defaults to one that decodes base64-encoded full URLs.
+ * allowedExtensions - file (path) extensions that connect-thumbs will try to thumbnail. Defaults to: jpg, jpeg, gif and png.
+ * presets - json object describing various image presets. You can indicate width, height and compression level for each. More options to come.
 
 ## License
 
