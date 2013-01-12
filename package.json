@@ -18,6 +18,7 @@
   } ]
   , "dependencies": {
       "underscore"         : "1.x"
+    , "async"              : "0.1.x"
     , "request"            : "2.x"
     , "pause"              : "0.x"
     , "send"               : "0.x"
