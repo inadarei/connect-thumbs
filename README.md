@@ -63,7 +63,7 @@ proxy/cache. Good options may be:
     app.use(thumbs({
       "ttl": "92000"
     , "tmpDir": "/tmp/mynodethumbnails"
-    , "decodeFn": loadImageUrlFromDbById
+    , "decodeFn": someModule.loadImageUrlFromDbById
     , "allowedExtensions": ['png', 'jpg']
     , "presets": {
         small: {
