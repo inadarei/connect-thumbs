@@ -36,8 +36,8 @@ This is because:
  [URL of Einstein's photo on Wikipedia](http://upload.wikimedia.org/wikipedia/commons/6/66/Einstein_1921_by_F_Schmutzer.jpg)
  and connect-middleware uses base64, by default, to encode the ID of the desired image.
  
-You can provide an alternative "decoderFn" function, if you would rather use shorter IDs of your photos from your database, 
-or UUIDs or whatever else makes sense to you (see below). Custom decoderFn functions must have following signature: 
+You can provide an alternative `decodeFn` function, if you would rather use shorter IDs of your photos from your database, 
+or UUIDs or whatever else makes sense to you (see below). Custom `decodeFn` functions must have following signature: 
 
     function(encodedURL, callback)
     
