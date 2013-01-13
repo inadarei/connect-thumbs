@@ -35,7 +35,7 @@ For Nginx, your configuration may look something like the following:
 Alternatively, sometimes connect-static is used to serve static content. If you do that, please make sure that 
 connect-static fires *after* connect-thumbs does.
     
-## Express.js Usage
+## Connect.js/Express.js Usage
 
     var thumbs = require('connect-thumbs');
     app.use(thumbs());
