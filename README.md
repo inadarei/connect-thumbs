@@ -66,12 +66,14 @@ and must call callback, upon completion, with following syntax:
 
 # Performance and Scalability
 
-Node.js is very fast, but Imagemagick most certainly is not (and neither may be your custom decodeFn function if it is doing a database 
-lookup for every request), so in any production set up it is highly recommended to put thubmnailed URLs behind some sort of
-proxy/cache. Good options may be:
+Node.js is very fast, but Imagemagick most certainly is not (and neither may be your custom decodeFn function if it
+is doing a database lookup for every request), so in any production set up it is highly recommended to put thubmnailing
+of images behind some sort of proxy/cache. Viable options may be:
 
-- Varnish
-- A good CDN such as Amazon's CloudFront
+- Enable the disk-based cache provided by the Connect-Thumbs itself. You can do this by passing `tmpCacheTTL`
+configuration variable when initializing Thumbs. This variable is set in seconds and is 0 (i.e. cache disabled) by default.
+- Put Varnish in front of the thumbnail URLs
+- Use a robust CDN such as Amazon's CloudFront
 - Pick your own poison.
 
 
@@ -79,7 +81,8 @@ proxy/cache. Good options may be:
 
 ```
     app.use(thumbs({
-      "ttl": "92000"
+      "ttl": 92000
+    , "tmpCacheTTL": 86400
     , "tmpDir": "/tmp/mynodethumbnails"
     , "decodeFn": someModule.loadImageUrlFromDbById
     , "allowedExtensions": ['png', 'jpg']
@@ -103,6 +106,7 @@ proxy/cache. Good options may be:
 where:
 
  * ttl - is the cache duration that will be returned in the HTTP headers for the resulting thumbnail
+ * tmpCacheTTL - time (in seconds) to cache thumbnails in temp folder. Defaults to 0 (cache disabled).
  * tmpDir - is the Node-writable temp folder where file operations will be performed. Defaults to: `/tmp/nodethumbnails`. 
    You may want to periodically clean-up that folder.
  * decodeFn - custom decoder function. Defaults to one that decodes base64-encoded full URLs.

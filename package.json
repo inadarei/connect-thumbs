@@ -24,6 +24,7 @@
     , "send"               : "0.x"
     , "mkdirp"             : "0.x"
     , "imagemagick"        : "0.x"
+    , "moment"             : "1.7.x"
   }
   , "devDependencies": {"connect": "*"},
     "optionalDependencies": {}
