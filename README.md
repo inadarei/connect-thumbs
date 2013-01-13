@@ -73,7 +73,7 @@ Viable options include:
 
 - Enabling the integrated disk-based cache provided by Connect-Thumbs. You can do this by passing custom `tmpCacheTTL`
 configuration variable when initializing Thumbs. This variable is set in seconds and is 0 by default. Setting it 
-values greater than 0 enables caching.
+to values greater than 0 enables caching.
 - Put [Varnish](https://www.varnish-cache.org/) in front of the thumbnail URLs
 - Use a robust CDN such as [Amazon's CloudFront](http://aws.amazon.com/cloudfront/)
 - Pick your own poison.
@@ -107,7 +107,7 @@ values greater than 0 enables caching.
 
 where:
 
- * ttl - is the cache duration that will be returned in the HTTP headers for the resulting thumbnail
+ * ttl - is the client-side cache duration that will be returned in the HTTP headers for the resulting thumbnail.
  * tmpCacheTTL - time (in seconds) to cache thumbnails in temp folder. Defaults to 0 (cache disabled).
  * tmpDir - is the Node-writable temp folder where file operations will be performed. Defaults to: `/tmp/nodethumbnails`. 
    You may want to periodically clean-up that folder.
