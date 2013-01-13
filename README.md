@@ -12,7 +12,25 @@ Connect.js-complient way, allowing sensible defaults and high degree of customiz
     
 *ATTENTION*: in typical web setups, static content such as images is often served by a web-server, never allowing 
 requests to *.jpg, *.png etc. to reach Node process. If you want to use connect-thumbs, obviously you must allow
-paths to thumbnailed images to pass through to Node. Please add appropriate exception to you web server configuration.
+paths to thumbnailed images to pass through to Node. Please add appropriate exception to you web server configuration. 
+For Nginx, your configuration may look something like the following:
+
+```
+  # Thumbnail processing
+  location ^~ /thumbs {
+    auth_basic off;
+
+    proxy_pass         http://127.0.0.1:3333;
+    proxy_set_header   Host                   $http_host;
+    proxy_redirect off;
+  }
+
+  #  static content
+  location ~* ^.+.(jpg|jpeg|gif|css|png|js|ico|xml)$ {
+    # access_log        off;
+    expires           15d;
+  }
+```
 
 Alternatively, sometimes connect-static is used to serve static content. If you do that, please make sure that 
 connect-static fires *after* connect-thumbs does.
