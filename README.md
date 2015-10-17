@@ -8,7 +8,7 @@ Connect.js-complient way, allowing sensible defaults and high degree of customiz
 
 ## Installation
 
-    $ npm install connect-thumbs
+    $ npm install connect-thumbs --save
     
 **CAUTION:** Connect-thumbs uses Imagemagick. Make sure your system has imagemagick properly installed, otherwise you are likely to get the following error: `Error: spawn identify ENOENT`
 
