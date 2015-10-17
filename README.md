@@ -10,6 +10,10 @@ Connect.js-complient way, allowing sensible defaults and high degree of customiz
 
     $ npm install connect-thumbs
     
+**CAUTION:** Connect thumbs uses Imagemagick. Make sure your system has imagemagick properly installed, otherwise you are likely to get the following error: `Error: spawn identify ENOENT`
+
+## Serving Behind a Web Server
+    
 *ATTENTION*: in typical web setups, static content such as images is often served by a web-server, never allowing 
 requests to *.jpg, *.png etc. to reach Node process. If you want to use connect-thumbs, obviously you must allow
 paths to thumbnailed images to pass through to Node. Please add appropriate exception to you web server configuration. 
