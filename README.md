@@ -105,7 +105,11 @@ and must call callback, upon completion, with following syntax:
 
 where:
 
- * smartCrop - enables experiemntal, content-aware cropping based on: [Smartcrop.js](https://github.com/jwagner/smartcrop.js/)
+ * smartCrop - enables experiemntal, content-aware cropping based on: [Smartcrop.js](https://github.com/jwagner/smartcrop.js/).
+   This is `false` by default, until Smartcrop.js matures, but will become the default option as soon as
+   there is a stable release of that project.
+ * useIM - if you have trouble installing GraphicsMagick or prefer ImageMagick for any reason,
+   setting this to 'true' will skip using GraphicsMagick and use ImageMagick instead. False by default.
  * ttl - is the client-side cache duration that will be returned in the HTTP headers for the resulting thumbnail.
  * tmpCacheTTL - time (in seconds) to cache thumbnails in temp folder. Defaults to 0 (cache disabled).
  * tmpDir - is the Node-writable temp folder where file operations will be performed. Defaults to: `/tmp/nodethumbnails`. 
