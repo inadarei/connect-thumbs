@@ -4,14 +4,24 @@
 var express = require('express');
 var app = express();
 
+var smartCrop = false;
+
+if (process.env.SMARTCROP && process.env.SMARTCROP == 1) {
+  console.log("Running content-aware cropping");
+  smartCrop = true;
+} else {
+  console.log("Running simple cropping");
+}
+
+
 var thumbs = require('../index.js');
 app.use(thumbs({
-  smartCrop: true,
+  smartCrop: smartCrop,
   useIM: true,
   presets: {irakli: {
     width: 300,
     height: 520,
-    compression: 0.9
+    quality: 100
   }}}));
 
 app.get('/', function (req, res) {

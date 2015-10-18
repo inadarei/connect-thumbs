@@ -47,6 +47,29 @@ The last step takes a while, and also: make sure everything links properly after
 that you have the latest brew upgrade.
 
 On other platforms, you can consult: [Cairo documentation](http://cairographics.org/download/).
+
+## Running an Example
+
+If you have all the prerequisites installed you can launch a demo with:
+
+```
+> git clone https://github.com/inadarei/connect-thumbs.git
+> cd connect-thumbs
+> npm install
+> npm run example # for simple cropping
+> SMARTCROP=1 npm run example # for content-aware cropping
+```
+
+And then open your browser at the following URL: 
+<http://localhost:3000/thumbs/irakli/images/aHR0cDovL3d3dy5wdWJsaWNkb21haW5waWN0dXJlcy5uZXQvcGljdHVyZXMvMTAwMDAvdmVsa2EvMTA4MS0xMjQwMzI3MzE3cGMzcS5qcGc=.jpg>
+
+You can see on the following diagram what simple (on the left), and smart (on the right)
+ crops produce compared to the original (center)
+ 
+ ![](https://photos-5.dropbox.com/t/2/AAArVHWqsZ9BSR8wMVV1k8_kEjlilaUrQ2klJvcPbSTIxg/12/2126602/jpeg/32x32/1/1445216400/0/2/crops-smart.jpg/CIrmgQEgASACIAMgBSAHKAEoAigH/mYgRM1B4w8BqVaCxuWOJTEfplvCqRp5UF9mk3dWqvmo?size_mode=5)
+
+
+Photo Credit: [Andrew Schmidt](http://www.publicdomainpictures.net/view-image.php?image=2514&picture=seagull&large=1) (Public Domain)
     
 ## Connect.js/Express.js Usage
 
@@ -89,15 +112,15 @@ and must call callback, upon completion, with following syntax:
     , "presets" : {
         small : {
           width: 120
-          , compression:.5
+          , quality:.5
         }
         , medium : {
           width: 300
-          , compression:.7
+          , quality:.7
         }
         , large : {
           width: 900
-          , compression:.85
+          , quality:.85
         }
       }
     }));
@@ -116,8 +139,11 @@ where:
    You may want to periodically clean-up that folder.
  * decodeFn - custom decoder function. Defaults to one that decodes base64-encoded full URLs.
  * allowedExtensions - file (path) extensions that connect-thumbs will try to thumbnail. Defaults to: jpg, jpeg, gif and png.
- * presets - json object describing various image presets. You can indicate width, height and compression level for each. 
-   Currently width is required and it is the only required argument. Expect more flexibility here in the following versions.
+ * presets - json object describing various image presets. You can indicate width, height and quality 
+   level for each. Quality adjusts image compression level and its value ranges from 0 to 100 (best).
+    
+    Currently width is required and it is the only required argument. Expect more flexibility here in 
+    the following versions.
 
 ## Serving Behind a Web Server
     
