@@ -1,7 +1,8 @@
 connect-thumbs
 ==============
 
-Image thumbnailing middleware for Connect.js/Express.js
+Image thumbnailing middleware for Connect.js/Express.js that integrates with content-aware
+cropping provided by [Smartcrop.js](https://github.com/jwagner/smartcrop.js/)
 
 Connect-thumbs implements the boilerplate code for creating thumbnails of large images in a standard, 
 Connect.js-complient way, allowing sensible defaults and high degree of customization.
