@@ -1,7 +1,7 @@
 connect-thumbs
 ==============
 
-Image thumbnailing middleware for Connect.js
+Image thumbnailing middleware for Connect.js/Express.js
 
 Connect-thumbs implements the boilerplate code for creating thumbnails of large images in a standard, 
 Connect.js-complient way, allowing sensible defaults and high degree of customization.
