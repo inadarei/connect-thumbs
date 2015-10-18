@@ -1,34 +1,62 @@
 {
   "author": {
-    "name": "Irakli Nadareishvili"
-  , "url": "http://freshblurbs.com"
+    "name": "Irakli Nadareishvili",
+    "url": "http://freshblurbs.com"
+  },
+  "name": "connect-thumbs",
+  "description": "Image thumbnailing middleware for Connect.",
+  "keywords": [
+    "thumbnail",
+    "imagemagick",
+    "thumb",
+    "photos",
+    "crop",
+    "smartcrop",
+    "content-aware",
+    "resize",
+    "connect",
+    "middleware",
+    "express"
+  ],
+  "version": "0.1.7",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:inadarei/connect-thumbs.git"
+  },
+  "main": "./index.js",
+  "license": "MIT",
+  "dependencies": {
+    "async": "0.1.x",
+    "canvas": "^1.2.10",
+    "gm": "^1.20.0",
+    "lodash": "^3.10.1",
+    "mkdirp": "0.x",
+    "moment": "1.7.x",
+    "pause": "0.x",
+    "request": "2.x",
+    "send": "0.x",
+    "smartcrop": "0.0.1"
+  },
+  "devDependencies": {
+    "express": "^4.13.3",
+    "connect": "*",
+    "after": "^0.8.1",
+    "istanbul": "^0.3.2",
+    "mocha": "^2.1.0",
+    "chai": "^1.9.1",
+    "should": "^4.4.4",
+    "jshint": "^2.5.x"
+  },
+  "scripts": {
+    "example": "node example/first.js",
+    "prepublish": "npm prune",
+    "test": "mocha --reporter spec --bail --check-leaks test/",
+    "pretest": "jshint lib",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
   }
-  , "name": "connect-thumbs"
-  , "description": "Image thumbnailing middleware for Connect."
-  , "keywords": ["thumbnail", "imagemagick", "thumb", "photos", "crop", "resize", "connect", "middleware"]
-  , "version": "0.1.7"
-  , "repository": {
-      "type": "git"
-    , "url": "git@github.com:inadarei/connect-thumbs.git"
-  }
-  , "main": "./index.js"
-  , "licenses": [ {
-      "type": "MIT"
-    , "url": "http://www.opensource.org/licenses/MIT"
-  } ]
-  , "dependencies": {
-      "underscore"         : "1.x"
-    , "async"              : "0.1.x"
-    , "request"            : "2.x"
-    , "pause"              : "0.x"
-    , "send"               : "0.x"
-    , "mkdirp"             : "0.x"
-    , "imagemagick"        : "0.x"
-    , "moment"             : "1.7.x"
-  }
-  , "devDependencies": {"connect": "*"},
-    "optionalDependencies": {}
-    , "engines": {
-        "node": "*"
-    }
 }

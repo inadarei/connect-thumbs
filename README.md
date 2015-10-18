@@ -12,10 +12,24 @@ Connect.js-complient way, allowing sensible defaults and high degree of customiz
     
 ### Installing Dependencies    
 
-Connect-thumbs uses Imagemagick. Make sure your system has imagemagick properly installed, 
-otherwise you are likely to get the following error: `Error: spawn identify ENOENT`. On
-OS-X you can easily install it with `brew install imagemagick`. There are also APT and YUM
-repositories you can use for Ubuntu/Debian and RedHat/Centos/Fedora respectively.
+Connect-thumbs can use `GraphicsMagic` or `Imagemagick` for image manipulation 
+(see: [Configuration](##configuration)). 
+
+Make sure your system has one of these packages properly installed, 
+otherwise you are likely to get the following error: `Error: spawn identify ENOENT`. 
+
+On OS-X you can easily install them with: 
+
+```console
+> brew install imagemagick
+# and
+> brew install graphicsmagick
+# if you want webP support:
+> brew install imagemagick --with-webp
+```
+
+Similarly, there are also APT and YUM repositories you can use for Ubuntu/Debian and 
+RedHat/Centos/Fedora respectively.
 
 If you are going to use smart (content-aware) cropping, you will also need to install Cairo. On OS-X you 
 can install it with: 
@@ -25,6 +39,7 @@ can install it with:
 > brew install pkgconfig
 > brew install pixman
 > brew install libjpeg
+> brew install giflib 
 > brew install cairo
 ```
 
