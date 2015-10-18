@@ -90,7 +90,7 @@ and must call callback, upon completion, with following syntax:
 
 where:
 
- * smartCrop - enables experiemntal, content-aware cropping based on: <https://github.com/jwagner/smartcrop.js/>
+ * smartCrop - enables experiemntal, content-aware cropping based on: [Smartcrop.js](https://github.com/jwagner/smartcrop.js/)
  * ttl - is the client-side cache duration that will be returned in the HTTP headers for the resulting thumbnail.
  * tmpCacheTTL - time (in seconds) to cache thumbnails in temp folder. Defaults to 0 (cache disabled).
  * tmpDir - is the Node-writable temp folder where file operations will be performed. Defaults to: `/tmp/nodethumbnails`. 
