@@ -12,7 +12,7 @@ Connect.js-complient way, allowing sensible defaults and high degree of customiz
     
 ### Installing Dependencies    
 
-Connect-thumbs can use `GraphicsMagic` or `Imagemagick` for image manipulation 
+Connect-thumbs can use `GraphicsMagick` or `Imagemagick` for image manipulation 
 (see: [Configuration](##configuration)). 
 
 Make sure your system has one of these packages properly installed, 
