@@ -1,5 +1,8 @@
-connect-thumbs
-==============
+# connect-thumbs
+
+[![NPM Version][npm-image]][npm-url]
+[![NPM Downloads][downloads-image]][downloads-url]
+[![Build Status][travis-image]][travis-url]
 
 Image thumbnailing middleware for Connect.js/Express.js that integrates with content-aware
 cropping provided by [Smartcrop.js](https://github.com/jwagner/smartcrop.js/)
