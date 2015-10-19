@@ -61,8 +61,11 @@ If you have all the prerequisites installed you can launch a demo with:
 > SMARTCROP=1 npm run example # for content-aware cropping
 ```
 
-And then open your browser at the following URL: 
-<http://localhost:3000/thumbs/irakli/images/aHR0cDovL3d3dy5wdWJsaWNkb21haW5waWN0dXJlcy5uZXQvcGljdHVyZXMvMTAwMDAvdmVsa2EvMTA4MS0xMjQwMzI3MzE3cGMzcS5qcGc=.jpg>
+And then open your browser at the [following URL](http://localhost:3000/thumbs/irakli/images/aHR0cDovL3d3dy5wdWJsaWNkb21haW5waWN0dXJlcy5uZXQvcGljdHVyZXMvMTAwMDAvdmVsa2EvMTA4MS0xMjQwMzI3MzE3cGMzcS5qcGc=.jpg): 
+
+```
+http://localhost:3000/thumbs/irakli/images/aHR0cDovL3d3dy5wdWJsaWNkb21haW5waWN0dXJlcy5uZXQvcGljdHVyZXMvMTAwMDAvdmVsa2EvMTA4MS0xMjQwMzI3MzE3cGMzcS5qcGc=.jpg
+```
 
 You can see on the following diagram what simple (on the left), and smart (on the right)
  crops produce compared to the original (center)
