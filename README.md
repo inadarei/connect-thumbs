@@ -194,8 +194,6 @@ to values greater than 0 enables caching.
 
 ## License
 
-## License
-
 [MIT](LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/connect-thumbs.svg
