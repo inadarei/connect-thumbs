@@ -200,3 +200,5 @@ to values greater than 0 enables caching.
 [npm-url]: https://npmjs.org/package/connect-thumbs
 [travis-image]: https://travis-ci.org/inadarei/connect-thumbs.svg
 [travis-url]: https://travis-ci.org/inadarei/connect-thumbs.svg
+[codacy-image]: https://api.codacy.com/project/badge/56d8bef2586d43dc8e76034cae022d64
+[codacy-url]: https://www.codacy.com/app/irakli/connect-thumbs
