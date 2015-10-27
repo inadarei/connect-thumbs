@@ -73,7 +73,7 @@ http://localhost:3000/thumbs/irakli/images/aHR0cDovL3d3dy5wdWJsaWNkb21haW5waWN0d
 You can see on the following diagram what simple (on the left), and smart (on the right)
  crops produce compared to the original (center)
  
- ![](https://photos-5.dropbox.com/t/2/AAArVHWqsZ9BSR8wMVV1k8_kEjlilaUrQ2klJvcPbSTIxg/12/2126602/jpeg/32x32/1/1445216400/0/2/crops-smart.jpg/CIrmgQEgASACIAMgBSAHKAEoAigH/mYgRM1B4w8BqVaCxuWOJTEfplvCqRp5UF9mk3dWqvmo?size_mode=5)
+ ![](https://raw.githubusercontent.com/inadarei/connect-thumbs/master/example/crops-smart.jpg)
 
 
 Photo Credit: [Andrew Schmidt](http://www.publicdomainpictures.net/view-image.php?image=2514&picture=seagull&large=1) (Public Domain)
