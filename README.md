@@ -116,6 +116,7 @@ and must call callback, upon completion, with following syntax:
     , "tmpDir" : "/tmp/mynodethumbnails"
     , "decodeFn" : someModule.loadImageUrlFromDbById
     , "allowedExtensions" : ['png', 'jpg']
+    , "rootPath" : "/thumbs"
     , "presets" : {
         small : {
           width: 120
@@ -146,6 +147,7 @@ where:
    You may want to periodically clean-up that folder.
  * decodeFn - custom decoder function. Defaults to one that decodes base64-encoded full URLs.
  * allowedExtensions - file (path) extensions that connect-thumbs will try to thumbnail. Defaults to: jpg, jpeg, gif and png.
+ * rootPath - The URL root ("/thumbs" by default).
  * presets - json object describing various image presets. You can indicate width, height and quality 
    level for each. Quality adjusts image compression level and its value ranges from 0 to 100 (best).
     
